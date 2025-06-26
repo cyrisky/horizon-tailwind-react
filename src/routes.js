@@ -17,6 +17,7 @@ import {
   MdOutlineShoppingCart,
   MdBarChart,
   MdPerson,
+  MdReceiptLong,
   MdLock,
 } from "react-icons/md";
 
@@ -27,6 +28,13 @@ const routes = [
     path: "default",
     icon: <MdHome className="h-6 w-6" />,
     component: <MainDashboard />,
+  },
+  {
+    name: "Orders",
+    layout: "/admin",
+    path: "orders",
+    icon: <MdReceiptLong className="h-6 w-6" />,
+    component: <OrdersTable />,
   },
   {
     name: "NFT Marketplace",
@@ -49,13 +57,6 @@ const routes = [
     path: "profile",
     icon: <MdPerson className="h-6 w-6" />,
     component: <Profile />,
-  },
-  {
-    name: "Orders",
-    layout: "/admin",
-    path: "orders",
-    icon: <MdOutlineShoppingCart className="h-6 w-6" />,
-    component: <OrdersTable />,
   },
   {
     name: "Sign In",
